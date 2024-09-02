@@ -67,6 +67,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Learned
 - Create layout as a component and use it
-- use x-layout tag to write content based on the page
+- use x-layout tag to write content based on the page (where layout is the name of the blade file inside components folder)
 - use $slot (blade helper) to switch between the pages using the same layout
 
