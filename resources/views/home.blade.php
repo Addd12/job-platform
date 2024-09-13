@@ -1,5 +1,5 @@
 <x-layout>
     <x-slot:heading>Home</x-slot>
-    <h1>home</h1>
+    <h1>This is the home page</h1>
 
 </x-layout>
