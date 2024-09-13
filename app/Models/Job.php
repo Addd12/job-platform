@@ -6,34 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
-class Job{
-    public static function all(): array{
-        return $jobs = [
-            [
-                'id' => 1,
-                'title' => 'Developer',
-                'salary' => '100000'
-            ],
-            [
-                'id' => 2,
-                'title' => 'Doctor',
-                'salary' => '200000'
-            ],
-            [
-                'id' => 3,
-                'title' => 'Teacher',
-                'salary' => '50000'
-            ],
-        ];
-    }
+class Job extends Model{
+    protected $table = 'job_listings';
 
-    public static function find(int $id): array
-    {
-        //static replaces Job that was being used in the route previously because now we are calling it within the Job class and the function all() is static
-        $job =  Arr::first(static::all(), fn($job)=>$job['id']== $id);
-        if(! $job){
-            abort(404);
-        }
-        return $job;
-    }
+    //fillable means that only the included items can be updated
+    protected $fillable = ['title', 'salary'];
 }
