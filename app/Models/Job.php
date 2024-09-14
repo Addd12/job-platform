@@ -13,4 +13,8 @@ class Job extends Model{
 
     //fillable means that only the included items can be updated
     protected $fillable = ['title', 'salary'];
+
+    public function employer(){
+        return $this->belongsTo(Employer::class);
+    }
 }
