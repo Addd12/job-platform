@@ -72,3 +72,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - debug using tinker
 - specify return type at method declaration (to catch errors earlier in the execution so that the error message is less confusing)
 - how to use laravel-debugbar package
+- how to create and use factories
