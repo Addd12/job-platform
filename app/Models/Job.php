@@ -12,7 +12,9 @@ class Job extends Model{
     protected $table = 'job_listings';
 
     //fillable means that only the included items can be updated
-    protected $fillable = ['title', 'salary'];
+    //protected $fillable = ['employer_id', 'title', 'salary'];
+
+    protected $guarded = [];
 
     public function employer(){
         return $this->belongsTo(Employer::class);
