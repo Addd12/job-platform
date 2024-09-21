@@ -74,3 +74,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - how to use laravel-debugbar package
 - how to create and use factories
 - CSRF - cross site request forgery, how it works explained
+- how to protect the user from session hijacking
+- rate limiting: control the rate of requests sent to the server, like login requests
