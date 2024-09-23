@@ -76,3 +76,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - CSRF - cross site request forgery, how it works explained
 - how to protect the user from session hijacking
 - rate limiting: control the rate of requests sent to the server, like login requests
+- used new class Gate for allowing certain actions and denying others (like editing anther employer's job)
+- created and used policy
+
+- inline authorization
+- determine if 2 models have the same id and belong to the same table
+- define gates inside AppServiceProvider
+- can
+- middleware authorization
+- policies
