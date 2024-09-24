@@ -78,6 +78,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - rate limiting: control the rate of requests sent to the server, like login requests
 - used new class Gate for allowing certain actions and denying others (like editing anther employer's job)
 - created and used policy
+- queues, creating a queue for mail sending and ran the work command
 
 - inline authorization
 - determine if 2 models have the same id and belong to the same table

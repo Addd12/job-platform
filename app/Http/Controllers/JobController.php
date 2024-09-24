@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\JobPosted;
+use Illuminate\Contracts\Mail\Mailable;
 
 class JobController extends Controller
 {
@@ -38,9 +39,9 @@ class JobController extends Controller
             'employer_id' => 1
         ]);
 
-            Mail::to($job->employer->user)->send(
-                new JobPosted($job)
-            );
+        Mail::to($job->employer->user)->queue(
+            new JobPosted($job)
+        );
 
         return redirect('/jobs');
     }
